@@ -6,6 +6,7 @@
 body {
     background: #000000;
     color: #ffffff;
+    background-image: url(https://upload.wikimedia.org/wikipedia/en/thumb/a/a4/Flag_of_the_United_States.svg/1235px-Flag_of_the_United_States.svg.png);
     font-family: 'Merriweather', sans-serif;
 }
 
@@ -49,11 +50,14 @@ div.caption: {
     clear: both;
 }
 .blueBack{
-	color: white;
+        color: white;
 }
 
 .redBack{
-	background-color: red;
-	color: white;
+        background-color: red;
+        color: white;
+}
+h3{
+	color: blue;
 }
 
