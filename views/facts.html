@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>About Sharks</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link href="/css/styles.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Merriweather:400,700" rel="stylesheet" type="text/css">
+</head>
+<nav class="navbar navbar-dark navbar-static-top navbar-expand-md">
+    <div class="container">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false"> <span class="sr-only">Toggle navigation</span>
+        </button> <a class="navbar-brand" href="/">USA Facts </a>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav mr-auto">
+                <li class="nav-item"><a href="/" class="nav-link">Home</a>
+                </li>
+                <li class="active nav-item"><a href="/facts" class="nav-link">Sharks</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="jumbotron text-center">
+    <h1>USA Facts</h1>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-4">
+		 <p>
+            	<h4>The United States has had 44 different presidents and could potentially see a 45th if the current president, Donald Trump, does not win his re-election in November.</h4>
+           	 </p>
+        </div>
+        <div class="col-lg-4">
+            <p>
+            <img src="https://cdn.countryflags.com/thumbs/united-states-of-america/flag-400.png" alt="USA Flag">
+            </p>
+        </div>
+	<div class="col-lg-4">
+            <p>
+                <form action="/facts/addFact" method="post">
+                    <div class="caption">Enter Your Shark</div>
+		    <input type="text" placeholder="Name" name="name" <%=facts[i].name; %>
+                    <input type="text" placeholder="Fact" name="fact" <%=facts[i].fact; %>
+                    <button type="submit">Submit</button>
+                </form>
+            </p>
+        </div>
+    </div>
+  </div>
+</html>
+
