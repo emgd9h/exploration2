@@ -1,6 +1,9 @@
 const express = require('express');
 const app = express();
 const router = express.Router();
+const db = require('./db');
+const facts = require('./routes/facts');
+
 
 const path = __dirname + '/views/';
 const port = 8080;
@@ -14,13 +17,17 @@ router.get('/',function(req,res){
   res.sendFile(path + 'index.html');
 });
 
-router.get('/sharks',function(req,res){
-  res.sendFile(path + 'sharks.html');
+router.get('/facts',function(req,res){
+  res.sendFile(path + 'facts.html');
 });
 
+app.engine('html', require('ejs').renderFile);
+app.set('view engine', 'html');
+app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path));
-app.use('/', router);
+app.use('/facts', facts);
 
 app.listen(port, function () {
   console.log('Example app listening on port 8080!')
 })
+
